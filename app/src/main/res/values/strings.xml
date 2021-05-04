@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Fågelappen</string>
+    <string name="hyperlink_about_talgoxe"><a href="https://www.flickr.com/photos/22594688@N08/16449636286">"Talgoxe-0162"</a> by <a href="https://www.flickr.com/photos/22594688@N08">"Ragnhild &amp; Neil Crawford"</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&amp;atype=rich">"CC BY-SA 2.0"</a></string>
 </resources>
+
