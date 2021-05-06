@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent welcome_intent = new Intent (this, WelcomeSplashActivity.class);
+        startActivity(welcome_intent);
 
         //Add welcome splash screen...(with welcome msg and bird picture...)
 
