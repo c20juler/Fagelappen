@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Add welcome splash screen...(with welcome msg and bird picture...)
 
-        new JsonTask().execute("");
+        new JsonTask().execute("https://wwwlab.iit.his.se/brom/kurser/mobilprog/dbservice/admin/getdataasjson.php?type=c20juler");
 
         listData = new ArrayList<>();
         adapter = new ArrayAdapter<>(this, R.layout.list_item, listData);
