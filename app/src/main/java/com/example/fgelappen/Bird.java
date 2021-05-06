@@ -30,7 +30,7 @@ public class Bird {
         return category;
     }
 
-    public int size() {
+    public int getSize() {
         return size;
     }
 

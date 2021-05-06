@@ -47,6 +47,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                String currentBirdName = listData.get(position).getName();
+                String currentBirdCategory = listData.get(position).getCategory();
+                int currentBirdSize = listData.get(position).getSize();
+
+                Intent birdIntent = new Intent(MainActivity.this, SecondActivity.class);
+                birdIntent.putExtra("birdName", currentBirdName);
+                birdIntent.putExtra("birdCategory", currentBirdCategory);
+                birdIntent.putExtra("birdSize", currentBirdSize);
+                startActivity(birdIntent);
             }
         });
 
