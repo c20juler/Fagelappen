@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -102,6 +104,20 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String json) {
             Log.d("TAG", json);
+
+            Log.d("TAG ==>", json);
+            Gson gson = new Gson();
+            Bird[] temporary = gson.fromJson(json,Bird[].class);
+
+            for (int i = 0; i < temporary.length; i++) {
+                Bird bird = temporary[i];
+                Log.d("AsyncTask ==>", "Found a bird!: "+bird);
+                listData.add(bird);
+
+            }
+            adapter.notifyDataSetChanged();
+
+
         }
     }
 
