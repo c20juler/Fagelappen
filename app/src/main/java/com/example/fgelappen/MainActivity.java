@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
         //Add welcome splash screen...(with welcome msg and bird picture...)
 
+        new JsonTask().execute("");
+
         listData = new ArrayList<>();
         adapter = new ArrayAdapter<>(this, R.layout.list_item, listData);
 
