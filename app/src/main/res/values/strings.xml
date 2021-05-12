@@ -1,5 +1,28 @@
 <resources>
     <string name="app_name">Fågelappen</string>
-    <string name="hyperlink_about_talgoxe"><a href="https://www.flickr.com/photos/22594688@N08/16449636286">"Talgoxe-0162"</a> by <a href="https://www.flickr.com/photos/22594688@N08">"Ragnhild &amp; Neil Crawford"</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&amp;atype=rich">"CC BY-SA 2.0"</a></string>
+
+    <string name="attribution_blåmes"><a href="https://www.flickr.com/photos/77370075@N07/11028171375">"Blåmes / Blue Tit"</a>
+        by <a href="https://www.flickr.com/photos/77370075@N07">"Stefan Berndtsson"</a> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&amp;atype=rich">
+            "CC BY 2.0"</a></string>
+
+    <string name="attribution_gräsand"><a href="https://www.flickr.com/photos/77370075@N07/8583616834">"Gräsand X Snatterand / Mallard X Gadwall"</a>
+        by <a href="https://www.flickr.com/photos/77370075@N07">"Stefan Berndtsson"</a> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/">
+            "CC BY 2.0"</a></string>
+
+    <string name="attribution_kattuggla"><a href="https://www.flickr.com/photos/77370075@N07/27748972511">"Kattuggla / Tawny Owl"</a>
+        by <a href="https://www.flickr.com/photos/sbern/">"Stefan Berndtsson"</a> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&amp;atype=rich">
+            "CC BY 2.0"</a></string>
+
+    <string name="attribution_kungsfiskaren"><a href="https://www.flickr.com/photos/62251911@N08/12484570105">"Kingfisher"</a>
+        by <a href="https://www.flickr.com/photos/gilbertofotos/">"Gilberto Pereira"</a> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&amp;atype=rich">
+            "CC BY 2.0"</a></string>
+
+    <string name="attribution_steglits"><a href="https://www.flickr.com/photos/77370075@N07/8612981857">"Steglits / Goldfinch"</a>
+        by <a href="https://www.flickr.com/photos/sbern/">"Stefan Berndtsson"</a> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&amp;atype=rich">
+            "CC BY 2.0"</a></string>
+
+    <string name="attribution_talgoxe"><a href="https://www.flickr.com/photos/22594688@N08/16449636286">"Talgoxe-0162"</a>
+        by <a href="https://www.flickr.com/photos/22594688@N08">"Ragnhild &amp; Neil Crawford"</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&amp;atype=rich">
+            "CC BY-SA 2.0"</a></string>
 </resources>
 

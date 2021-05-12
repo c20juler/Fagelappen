@@ -24,8 +24,22 @@ public class AboutActivity extends AppCompatActivity {
             }
         });
 
-        TextView t2 = (TextView) findViewById(R.id.talgoxe_attribution);
+        TextView t1 = (TextView) findViewById(R.id.bird_attribution1);
+        t1.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView t2 = (TextView) findViewById(R.id.bird_attribution2);
         t2.setMovementMethod(LinkMovementMethod.getInstance());
 
+        TextView t3 = (TextView) findViewById(R.id.bird_attribution3);
+        t3.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView t4 = (TextView) findViewById(R.id.bird_attribution4);
+        t4.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView t5 = (TextView) findViewById(R.id.bird_attribution5);
+        t5.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView t6 = (TextView) findViewById(R.id.bird_attribution6);
+        t6.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }

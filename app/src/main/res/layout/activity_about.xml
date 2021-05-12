@@ -14,51 +14,24 @@
         android:textSize="40sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"/>
 
     <TextView
         android:id="@+id/paragraf_about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fågelappen tillgodoser dig med information om fåglar som vistas i Sverige..."
+        android:text="Fågelappen är ett praktiskt verktyg som tillgodoser alla fågelintresserande med information om fåglar som häckar i Sverige eller under flytt passerar landet."
         android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rubrik_about"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"/>
-
-    <ImageView
-        android:id="@+id/bild_talgoxe"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:contentDescription="Earth"
-        app:srcCompat="@drawable/talgoxe"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paragraf_about"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"/>
-
-    <TextView
-        android:id="@+id/talgoxe_attribution"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hyperlink_about_talgoxe"
-        android:textSize="14sp"
-        android:textFontWeight="700"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bild_talgoxe"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"/>
 
     <TextView
         android:id="@+id/rubrik_målgrupp"
@@ -68,9 +41,9 @@
         android:textSize="24sp"
         android:textFontWeight="700"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/talgoxe_attribution"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/paragraf_about"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="15dp"/>
@@ -79,15 +52,112 @@
         android:id="@+id/paragraf_målgrupp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fågelappen finns för Er fågelentusiaster när ni enkelt och smidigt vill komma åt information om fåglar som vistas i Sverige "
+        android:text="Fågelappen är till för alla fågelintresserade när man enkelt och smidigt vill komma åt information om fåglar som häckar i Sverige eller under flytt passerar landet."
         android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rubrik_målgrupp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CC Attribution"
+        android:id="@+id/rubrik_attributions"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paragraf_målgrupp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/bird_attribution1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attribution_blåmes"
+        android:textSize="14sp"
+        android:textFontWeight="700"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rubrik_attributions"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/bird_attribution2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attribution_gräsand"
+        android:textSize="14sp"
+        android:textFontWeight="700"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bird_attribution1"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/bird_attribution3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attribution_kattuggla"
+        android:textSize="14sp"
+        android:textFontWeight="700"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bird_attribution2"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/bird_attribution4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attribution_kungsfiskaren"
+        android:textSize="14sp"
+        android:textFontWeight="700"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bird_attribution3"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/bird_attribution5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attribution_steglits"
+        android:textSize="14sp"
+        android:textFontWeight="700"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bird_attribution4"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/bird_attribution6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attribution_talgoxe"
+        android:textSize="14sp"
+        android:textFontWeight="700"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bird_attribution5"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
 
     <Button
         android:layout_width="wrap_content"

@@ -3,8 +3,11 @@ package com.example.fgelappen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -15,6 +18,7 @@ public class SecondActivity extends AppCompatActivity {
     private String currentBirdName;
     private String currentBirdCategory;
     private String currentBirdSize;
+    private String currentBirdImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +28,17 @@ public class SecondActivity extends AppCompatActivity {
         currentBirdName = getIntent().getExtras().get("birdName").toString();
         currentBirdCategory = getIntent().getExtras().get("birdCategory").toString();
         currentBirdSize = getIntent().getExtras().get("birdSize").toString();
+        currentBirdImg = getIntent().getExtras().get("birdImg").toString();
 
         TextView bird_information = (TextView) findViewById(R.id.bird_information);
-
         bird_information.setText("Namn: "+currentBirdName + "\nFågelfamilj: "+currentBirdCategory+"\nLängd: "+currentBirdSize+" cm");
+
+        ImageView imageView = findViewById(R.id.bird_img);
+        Picasso.get().load(currentBirdImg).into(imageView);
+
+        //TextView bird_attribution - link to about page with cc attributions...
+
+        // "Creative Commons 10th Birthday Celebration San Francisco" by tvol is licensed under CC BY 2.0
+
     }
 }

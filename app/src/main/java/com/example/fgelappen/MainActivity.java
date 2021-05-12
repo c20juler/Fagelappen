@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Welcome splash screen...
         Intent welcome_intent = new Intent (this, WelcomeSplashActivity.class);
         startActivity(welcome_intent);
-
-        //Add welcome splash screen...(with welcome msg and bird picture...)
 
         new JsonTask().execute("https://wwwlab.iit.his.se/brom/kurser/mobilprog/dbservice/admin/getdataasjson.php?type=c20juler");
 
@@ -52,11 +52,14 @@ public class MainActivity extends AppCompatActivity {
                 String currentBirdName = listData.get(position).getName();
                 String currentBirdCategory = listData.get(position).getCategory();
                 int currentBirdSize = listData.get(position).getSize();
+                String currentBirdImg = listData.get(position).getAuxdata().getImg();
 
                 Intent birdIntent = new Intent(MainActivity.this, SecondActivity.class);
                 birdIntent.putExtra("birdName", currentBirdName);
                 birdIntent.putExtra("birdCategory", currentBirdCategory);
                 birdIntent.putExtra("birdSize", currentBirdSize);
+                birdIntent.putExtra("birdImg", currentBirdImg);
+
                 startActivity(birdIntent);
             }
         });
