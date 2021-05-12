@@ -9,7 +9,7 @@ import android.os.Handler;
 
 public class WelcomeSplashActivity extends AppCompatActivity {
 
-    private static int splash_timer = 2000;
+    private static int splashTimer = 1200;
 
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
@@ -19,6 +19,6 @@ public class WelcomeSplashActivity extends AppCompatActivity {
 
         new Handler().postDelayed(()-> {
             finish();
-        },splash_timer);
+        },splashTimer);
     }
 }

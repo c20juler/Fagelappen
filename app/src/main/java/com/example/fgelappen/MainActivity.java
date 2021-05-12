@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Welcome splash screen...
-        Intent welcome_intent = new Intent (this, WelcomeSplashActivity.class);
-        startActivity(welcome_intent);
+        Intent welcomeIntent = new Intent (this, WelcomeSplashActivity.class);
+        startActivity(welcomeIntent);
 
         new JsonTask().execute("https://wwwlab.iit.his.se/brom/kurser/mobilprog/dbservice/admin/getdataasjson.php?type=c20juler");
 

@@ -16,13 +16,7 @@ public class AboutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        Button button = findViewById(R.id.closeBtn_about);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView t1 = (TextView) findViewById(R.id.bird_attribution1);
         t1.setMovementMethod(LinkMovementMethod.getInstance());

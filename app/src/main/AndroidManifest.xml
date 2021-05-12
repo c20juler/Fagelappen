@@ -12,9 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fågelappen">
         <activity android:name=".WelcomeSplashActivity"></activity>
-        <activity android:name=".SecondActivity" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SecondActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".AboutActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".MainActivity" android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
