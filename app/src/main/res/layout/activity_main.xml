@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fågelappen"
-        android:textSize="40sp"
-        android:id="@+id/rubrik_appen"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"/>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,13 +19,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fågellista"
-        android:textSize="30sp"
+        android:text="Fåglar"
+        android:textSize="40sp"
         android:id="@+id/rubrik_lista"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rubrik_appen"
-        android:layout_marginTop="55dp"
+        app:layout_constraintBottom_toTopOf="@+id/list_view"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:textFontWeight="900"/>
 
     <ListView
@@ -46,8 +35,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:dividerHeight="15.0sp"
         android:divider="@android:color/transparent">
     </ListView>

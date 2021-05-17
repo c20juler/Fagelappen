@@ -19,10 +19,11 @@
         android:layout_marginTop="10dp"/>
 
     <TextView
-        android:id="@+id/paragraf_about"
+        android:id="@+id/paragraf_målgrupp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fågelappen är ett praktiskt verktyg som tillgodoser alla fågelintresserande med information om fåglar som häckar i Sverige eller under flytt passerar landet."
+        android:text="Fågelappen behandlar de fågelarter som någorlunda regelbundet häckar i Sverige eller under sin flyttning passerar landet.
+        Fågelappen är till för alla fågelintresserade som snabbt och smidigt vill komma åt information om fåglar, vilken finns lättillänglig i form en lista."
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -34,39 +35,9 @@
         android:layout_marginTop="10dp"/>
 
     <TextView
-        android:id="@+id/rubrik_målgrupp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Målgrupp"
-        android:textSize="24sp"
-        android:textFontWeight="700"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paragraf_about"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="15dp"/>
-
-    <TextView
-        android:id="@+id/paragraf_målgrupp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fågelappen är till för alla fågelintresserade när man enkelt och smidigt vill hitta information om fåglar som häckar i Sverige eller under flytt passerar landet."
-        android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rubrik_målgrupp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CC Attribution"
+        android:text="Attribution"
         android:id="@+id/rubrik_attributions"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
