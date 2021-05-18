@@ -1,18 +1,5 @@
 package com.example.fgelappen;
 
-/*
-    "ID": "f_blåmes",
-	"name": "Blåmes",
-	"type": "c20juler",
-	"company": "",
-	"location": "",
-	"category": "Mesar",
-	"size": 12,
-	"cost": 0,
-	"auxdata": null
-
-	*/
-
 public class Bird {
 
     private String ID;
@@ -43,3 +30,5 @@ public class Bird {
         return name;
     }
 }
+
+

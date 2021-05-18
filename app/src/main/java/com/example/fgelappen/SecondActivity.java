@@ -32,8 +32,6 @@ public class SecondActivity extends AppCompatActivity {
         currentBirdSize = getIntent().getExtras().get("birdSize").toString();
         currentBirdImg = getIntent().getExtras().get("birdImg").toString();
 
-
-
         TextView bird_name = (TextView) findViewById(R.id.bird_name);
         bird_name.setText(currentBirdName);
 
@@ -42,10 +40,6 @@ public class SecondActivity extends AppCompatActivity {
 
         ImageView imageView = findViewById(R.id.bird_img);
         Picasso.get().load(currentBirdImg).into(imageView);
-
-        //TextView bird_attribution - link to about page with cc attributions...
-
-        // "Creative Commons 10th Birthday Celebration San Francisco" by tvol is licensed under CC BY 2.0
 
     }
 }
