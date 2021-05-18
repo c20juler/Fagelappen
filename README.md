@@ -13,15 +13,14 @@ Två aktiviteter skapades, en för "about page" och en för en sida som senare s
 ```xml
   <uses-permission android:name="android.permission.INTERNET" />
 ```
-Gav appen internet åtkomst för att komma åt data från webservicen.
-<br />
+Gav appen internet åtkomst för att komma åt data från webservicen.__
 
 
 ```java
     private ArrayList<Bird> listData;
     private ArrayAdapter<Bird> adapter;
 ```
-Deklarerade två privata medlemsvariabler i MainActivity, en för arraylist och en för arrayadapter.\
+Deklarerade två privata medlemsvariabler i MainActivity, en för arraylist och en för arrayadapter.__
 
 
 En layout fil för list item skapades, där en textview lades till.\ 
