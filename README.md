@@ -200,10 +200,10 @@ launchMode="singleTop" för Mainactivity i Android Manifestet. Launchmode="singl
 ## Screenshots på färdig applikation
 
 <img src="Screenshot_1621337473.png" width="400">
-**Splashscreen vid start av applikation**
+Splashscreen vid start av applikation
 
 <img src="Screenshot_1621337496.png" width="400">
-**Lista med fåglar**
+Lista med fåglar
 
 <img src="Screenshot_1621337501.png" width="400">
-**Detalj vy för fågel efter att ha klickat på en fågel i listan**
+Detalj vy för fågel efter att ha klickat på en fågel i listan
