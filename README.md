@@ -14,7 +14,7 @@ Två aktiviteter skapades, en för "about page" och en för en sida som senare s
   <uses-permission android:name="android.permission.INTERNET" />
 ```
 Gav appen internet åtkomst för att komma åt data från webservicen.
-\
+<br />
 
 
 ```java
