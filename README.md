@@ -183,6 +183,8 @@ launchMode="singleTop" för Mainactivity i Android Manifestet. Launchmode="singl
 
 ## Screenshots på färdig applikation
 
-<img src="Screenshot_" width="400">
+<img src="Screenshot_1621337473.png" width="400">
 
-**Bild på applikation...**
+<img src="Screenshot_1621337496.png" width="400">
+
+<img src="Screenshot_1621337501.png" width="400">
