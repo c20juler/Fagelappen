@@ -13,24 +13,24 @@ Två aktiviteter skapades, en för "about page" och en för en sida som senare s
 ```xml
   <uses-permission android:name="android.permission.INTERNET" />
 ```
-Gav appen internet åtkomst för att komma åt data från webservicen.__
+Gav appen internet åtkomst för att komma åt data från webservicen.
 
 
 ```java
     private ArrayList<Bird> listData;
     private ArrayAdapter<Bird> adapter;
 ```
-Deklarerade två privata medlemsvariabler i MainActivity, en för arraylist och en för arrayadapter.__
+Deklarerade två privata medlemsvariabler i MainActivity, en för arraylist och en för arrayadapter.
 
 
-En layout fil för list item skapades, där en textview lades till.\ 
+En layout fil för list item skapades, där en textview lades till.
 
 
 ```java
   listData = new ArrayList<>();
   adapter = new ArrayAdapter<>(this, R.layout.list_item, listData);
 ```
-Dessa instansieras i oncreate, där arraylist tilldelas ett nytt arraylist objekt och adapter ett adapter objekt (med list_item och listData som parametrar).\  
+Dessa instansieras i oncreate, där arraylist tilldelas ett nytt arraylist objekt och adapter ett adapter objekt (med list_item och listData som parametrar).
 
 
 ```java
@@ -38,7 +38,7 @@ Dessa instansieras i oncreate, där arraylist tilldelas ett nytt arraylist objek
     my_listView.setAdapter(adapter);
 ```
 En listview deklarerades och initierades med ett befintligt listview objekt med findviewByid. 
-Adaptern applicerades därefter på my_listView med setAdapter();\  
+Adaptern applicerades därefter på my_listView med setAdapter();
 
 
 ```java
@@ -50,7 +50,7 @@ Adaptern applicerades därefter på my_listView med setAdapter();\
         ... 
 ```
 En klass för Bird skapades samt en för Auxdata. För dessa lades privata medlems variabler till för 
-att kunna hantera data från webservicen.\ 
+att kunna hantera data från webservicen.
 
 
 ```java
@@ -66,7 +66,7 @@ att kunna hantera data från webservicen.\
         return size;
     }
 ```
-Skapade getter metoder i Bird klassen och Auxdata klassen för att kunna hämta data till MainActivity.\  
+Skapade getter metoder i Bird klassen och Auxdata klassen för att kunna hämta data till MainActivity.
 
 
 ```java
@@ -76,16 +76,16 @@ Skapade getter metoder i Bird klassen och Auxdata klassen för att kunna hämta 
     }
 }
 ```
-Skapade en toString metod för att visa hur objektet ser ut som en sträng, där namn returneras som en sträng.\
+Skapade en toString metod för att visa hur objektet ser ut som en sträng, där namn returneras som en sträng.
 
 
-Fyllde webservice med data om fåglar genom att använda "admin interface" verktyget.\
+Fyllde webservice med data om fåglar genom att använda "admin interface" verktyget.
 
 
 ```java
 new JsonTask().execute("https://wwwlab.iit.his.se/brom/kurser/mobilprog/dbservice/admin/getdataasjson.php?type=c20juler");
 ```
-Json data från webservicen hämtas med "new JsonTask().execute()" och hanteras med JsonTask koden som hämtades från Github.\  
+Json data från webservicen hämtas med "new JsonTask().execute()" och hanteras med JsonTask koden som hämtades från Github.
      
      
 ```java
@@ -107,7 +107,7 @@ protected void onPostExecute(String json) {
 Lade till gson biblioteket. I koden ovan deklarerades en variabel gson av typen Gson och instancierades med ett nytt Gson objekt. 
 Därefter deklarerades en variabel "temporay" av typen Bird[], och instancierades med ett gson objekt som parsar json datan tillsammans med klassen Bird. 
 Den temporära arrayen "temporary" loopas igenom med en for loop, och för varje instans läggs varje objekt till i bird och sendan i listData med add(). 
-Därefter meddelas adaptern om att innehållet i "listData" har uppdaterats med notifyDataSetChanged().\ 
+Därefter meddelas adaptern om att innehållet i "listData" har uppdaterats med notifyDataSetChanged().
 
 
 ```java
@@ -133,7 +133,7 @@ my_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 En onClick listener sattes för items i listview. När man klickar på ett item körs getter metoderna i Bird klassen och det värde som returneras tilldelas till variabler av motsvarande datatyp.
 Ett nytt intent skapas för att köra SecondActivity, där egenskaper hos den fågel man klickat på ska visas upp i en ny vy. 
 Med intentet "birdIntent" skickas data med hjälp av .putExtra(). Där anges ett keyvalue par, där en nyckel skapas t.ex. "birdName" och "currentBirdName" som värde. Detta görs för varje fågel egenskap som ska skickas 
-med till secondActivity. När all data lags till för intentet körs birdIntent med startActivity().\  
+med till secondActivity. När all data lags till för intentet körs birdIntent med startActivity().
 
 
 ```java
@@ -142,7 +142,7 @@ med till secondActivity. När all data lags till för intentet körs birdIntent 
     private String currentBirdSize;
     private String currentBirdImg;
 ```
-I secondActivity skapas privata medlemsvariabler för att lagra parametrarna som skickades med birdIntent.\  
+I secondActivity skapas privata medlemsvariabler för att lagra parametrarna som skickades med birdIntent.
 
 
 ```java
@@ -151,7 +151,7 @@ I secondActivity skapas privata medlemsvariabler för att lagra parametrarna som
         currentBirdSize = getIntent().getExtras().get("birdSize").toString();
         currentBirdImg = getIntent().getExtras().get("birdImg").toString();
 ```
-Parametrarna som skickades med birdIntent hämtas med getIntent().getExtras().get("...").toString() och tilldelas till respektive privata medlemsvariabel som skapades enligt förra kodsnutten.\ 
+Parametrarna som skickades med birdIntent hämtas med getIntent().getExtras().get("...").toString() och tilldelas till respektive privata medlemsvariabel som skapades enligt förra kodsnutten.
 
 
 ```java
@@ -165,7 +165,7 @@ Parametrarna som skickades med birdIntent hämtas med getIntent().getExtras().ge
         Picasso.get().load(currentBirdImg).into(imageView);
 ```
 De privata medlems variablerna läggs nu till för de olika vyerna. För textview användes setText(privat medlemsvariabel) och i imageview med hjälp av Picasso bibliotektet med load(privat medelmsvariabel) 
-som laddar in bild url och visar den i imageview med into(imageView).\ 
+som laddar in bild url och visar den i imageview med into(imageView).
 
 
 ```java
@@ -184,7 +184,7 @@ private static int splashTimer = 1200;
 ```
 Skapade en aktivitet för en splash screen som visas när man öppnar appen, den körs i början av Oncreate i MainActivity med ett intent. 
 En timer för hur länge splash screenen visas sattes med en privat medlemsvariabel. I oncreate skapades en ny Handler() och postDelayed() som först kör splashTimer (fördröjer finish()) och därefter körs
-finish() som avslutar aktiviteten. Splash screenen visar helt enkelt bara upp appens namn när applikationen startas.\  
+finish() som avslutar aktiviteten. Splash screenen visar helt enkelt bara upp appens namn när applikationen startas.
 
 
 ```java
@@ -194,16 +194,16 @@ getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 <activity android:name=".MainActivity" android:launchMode="singleTop">
 ```
 För att gå tillbaka till MainActivity från SecondActivity och AboutActivity används en tillbaka knapp i "app baren", denna applicerades med hjälp av java koden ovan tillsammans med 
-launchMode="singleTop" för Mainactivity i Android Manifestet. Launchmode="singleTop" användes i detta fall som en lösning för att splashscreen inte ska köras varje gång man går tillbaka i applikationen.\ 
+launchMode="singleTop" för Mainactivity i Android Manifestet. Launchmode="singleTop" användes i detta fall som en lösning för att splashscreen inte ska köras varje gång man går tillbaka i applikationen.
 
 
-## Screenshots på färdig applikation\
+## Screenshots på färdig applikation
 
 <img src="Screenshot_1621337473.png" width="400">
-**Splashscreen vid start av applikation**\ 
+**Splashscreen vid start av applikation**
 
 <img src="Screenshot_1621337496.png" width="400">
-**Lista med fåglar**\
+**Lista med fåglar**
 
 <img src="Screenshot_1621337501.png" width="400">
 **Detalj vy för fågel efter att ha klickat på en fågel i listan**
