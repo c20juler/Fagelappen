@@ -9,30 +9,30 @@ Denna information finns även på About sidan i appen för att visa målgrupp oc
 Ett nytt projekt skapades och lades till på Github.
 Två aktiviteter skapades, en för "about page" och en för en sida som senare ska visa information om en fågelart. 
 
-<br/>
+
 
 ```xml
   <uses-permission android:name="android.permission.INTERNET" />
 ```
 Gav appen internet åtkomst för att komma åt data från webservicen.
-<br/>
+
 
 ```java
     private ArrayList<Bird> listData;
     private ArrayAdapter<Bird> adapter;
 ```
 Deklarerade två privata medlemsvariabler i MainActivity, en för arraylist och en för arrayadapter.  
-<br/>
+
 
 En layout fil för list item skapades, där en textview lades till.
-<br/>
+
 
 ```java
   listData = new ArrayList<>();
   adapter = new ArrayAdapter<>(this, R.layout.list_item, listData);
 ```
 Dessa instansieras i oncreate, där arraylist tilldelas ett nytt arraylist objekt och adapter ett adapter objekt (med list_item och listData som parametrar).
-<br/>
+
 
 ```java
     ListView my_listView=(ListView) findViewById(R.id.list_view);
@@ -40,7 +40,7 @@ Dessa instansieras i oncreate, där arraylist tilldelas ett nytt arraylist objek
 ```
 En listview deklarerades och initierades med ett befintligt listview objekt med findviewByid. 
 Adaptern applicerades därefter på my_listView med setAdapter();
-<br/>
+
 
 ```java
     public class Bird {
@@ -52,7 +52,7 @@ Adaptern applicerades därefter på my_listView med setAdapter();
 ```
 En klass för Bird skapades samt en för Auxdata. För dessa lades privata medlems variabler till för 
 att kunna hantera data från webservicen.
-<br/>
+
 
 ```java
  public String getName() {
@@ -68,7 +68,7 @@ att kunna hantera data från webservicen.
     }
 ```
 Skapade getter metoder i Bird klassen och Auxdata klassen för att kunna hämta data till MainActivity.
-<br/>
+
 
 ```java
 @Override
@@ -78,16 +78,16 @@ Skapade getter metoder i Bird klassen och Auxdata klassen för att kunna hämta 
 }
 ```
 Skapade en toString metod för att visa hur objektet ser ut som en sträng, där namn returneras som en sträng.
-<br/>
+
 
 Fyllde webservice med data om fåglar genom att använda "admin interface" verktyget.
-<br/>
+
 
 ```java
 new JsonTask().execute("https://wwwlab.iit.his.se/brom/kurser/mobilprog/dbservice/admin/getdataasjson.php?type=c20juler");
 ```
 Json data från webservicen hämtas med "new JsonTask().execute()" och hanteras med JsonTask koden som hämtades från Github.
-<br/>     
+     
      
 ```java
 protected void onPostExecute(String json) {
@@ -109,7 +109,7 @@ Lade till gson biblioteket. I koden ovan deklarerades en variabel gson av typen 
 Därefter deklarerades en variabel "temporay" av typen Bird[], och instancierades med ett gson objekt som parsar json datan tillsammans med klassen Bird. 
 Den temporära arrayen "temporary" loopas igenom med en for loop, och för varje instans läggs varje objekt till i bird och sendan i listData med add(). 
 Därefter meddelas adaptern om att innehållet i "listData" har uppdaterats med notifyDataSetChanged().
-<br/>
+
 
 ```java
 my_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -135,7 +135,7 @@ En onClick listener sattes för items i listview. När man klickar på ett item 
 Ett nytt intent skapas för att köra SecondActivity, där egenskaper hos den fågel man klickat på ska visas upp i en ny vy. 
 Med intentet "birdIntent" skickas data med hjälp av .putExtra(). Där anges ett keyvalue par, där en nyckel skapas t.ex. "birdName" och "currentBirdName" som värde. Detta görs för varje fågel egenskap som ska skickas 
 med till secondActivity. När all data lags till för intentet körs birdIntent med startActivity().
-<br/>
+
 
 ```java
     private String currentBirdName;
@@ -144,7 +144,7 @@ med till secondActivity. När all data lags till för intentet körs birdIntent 
     private String currentBirdImg;
 ```
 I secondActivity skapas privata medlemsvariabler för att lagra parametrarna som skickades med birdIntent.
-<br/>
+
 
 ```java
         currentBirdName = getIntent().getExtras().get("birdName").toString();
@@ -153,7 +153,7 @@ I secondActivity skapas privata medlemsvariabler för att lagra parametrarna som
         currentBirdImg = getIntent().getExtras().get("birdImg").toString();
 ```
 Parametrarna som skickades med birdIntent hämtas med getIntent().getExtras().get("...").toString() och tilldelas till respektive privata medlemsvariabel som skapades enligt förra kodsnutten.
-<br/>
+
 
 ```java
         TextView bird_name = (TextView) findViewById(R.id.bird_name);
@@ -167,7 +167,7 @@ Parametrarna som skickades med birdIntent hämtas med getIntent().getExtras().ge
 ```
 De privata medlems variablerna läggs nu till för de olika vyerna. För textview användes setText(privat medlemsvariabel) och i imageview med hjälp av Picasso bibliotektet med load(privat medelmsvariabel) 
 som laddar in bild url och visar den i imageview med into(imageView).
-<br/>
+
 
 ```java
 private static int splashTimer = 1200;
@@ -186,7 +186,7 @@ private static int splashTimer = 1200;
 Skapade en aktivitet för en splash screen som visas när man öppnar appen, den körs i början av Oncreate i MainActivity med ett intent. 
 En timer för hur länge splash screenen visas sattes med en privat medlemsvariabel. I oncreate skapades en ny Handler() och postDelayed() som först kör splashTimer (fördröjer finish()) och därefter körs
 finish() som avslutar aktiviteten. Splash screenen visar helt enkelt bara upp appens namn när applikationen startas.
-<br/>
+
 
 ```java
 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -196,15 +196,15 @@ getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 ```
 För att gå tillbaka till MainActivity från SecondActivity och AboutActivity används en tillbaka knapp i "app baren", denna applicerades med hjälp av java koden ovan tillsammans med 
 launchMode="singleTop" för Mainactivity i Android Manifestet. Launchmode="singleTop" användes i detta fall som en lösning för att splashscreen inte ska köras varje gång man går tillbaka i applikationen.
-<br/>
+
 
 ## Screenshots på färdig applikation
 
 <img src="Screenshot_1621337473.png" width="400">
 Splashscreen vid start av applikation
-<br/>
+
 <img src="Screenshot_1621337496.png" width="400">
 Lista med fåglar
-<br/>
+
 <img src="Screenshot_1621337501.png" width="400">
 Detalj vy för fågel efter att ha klickat på en fågel i listan
