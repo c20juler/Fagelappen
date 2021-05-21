@@ -8,6 +8,7 @@ Denna information finns även på About sidan i appen för att visa målgrupp oc
 ## Process
 Ett nytt projekt skapades och lades till på Github.
 Två aktiviteter skapades, en för "about page" och en för en sida som senare ska visa information om en fågelart. 
+
 <br/>
 
 ```xml
